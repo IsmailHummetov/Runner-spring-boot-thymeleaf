@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Runner
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rungroop
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  security:
+    user:
+      name: test
+      password: test
