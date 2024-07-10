@@ -38,6 +38,7 @@ public class SecurityConfig {
                     auth
                             .requestMatchers("/","/login", "/register", "/clubs", "/events","/css/**","/js/**")
                             .permitAll()
+                            .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
                             .requestMatchers("/clubs/*","/events/*")
                             .permitAll()
                             .anyRequest()

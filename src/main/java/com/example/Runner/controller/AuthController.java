@@ -1,18 +1,16 @@
 package com.example.Runner.controller;
 
 import com.example.Runner.dto.RegistrationDto;
-import com.example.Runner.models.User;
 import com.example.Runner.service.inter.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@Tag(name = "Auth", description = "Auth management APIs")
+@RestController
 public class AuthController {
     private UserService userService;
 

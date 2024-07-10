@@ -7,16 +7,17 @@ import com.example.Runner.security.SecurityUtil;
 import com.example.Runner.service.inter.ClubService;
 import com.example.Runner.service.inter.EventService;
 import com.example.Runner.service.inter.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@Tag(name = "Event", description = "Event management APIs")
+@RestController
 public class EventController {
     private EventService eventService;
     private ClubService clubService;
